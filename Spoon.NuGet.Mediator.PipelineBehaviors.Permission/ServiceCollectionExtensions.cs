@@ -35,5 +35,12 @@
 
             return services;
         }
+        
+        public static IServiceCollection AddPermissionPipelineBehaviourClaimManagerAlwaysFalseDefault(this IServiceCollection services)
+        {
+            services.AddInterceptedSingleton<IPermissionPipelineBehaviourClaimManager, PermissionPipelineBehaviourClaimAlwaysFalseDefaultManager, LogInterceptorDefault>();
+
+            return services;
+        }        
     }
 }
