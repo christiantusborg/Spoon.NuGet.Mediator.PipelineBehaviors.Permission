@@ -9,7 +9,7 @@
     /// </summary>
     /// <seealso cref="IPermissionPipelineBehaviourClaimManager" />
     [LogInterceptorDefaultLogLevel(LogLevel.Debug)]
-    public class PermissionPipelineBehaviourClaimManager : IPermissionPipelineBehaviourClaimManager
+    public class PermissionPipelineBehaviourClaimAlwaysTrueDefaultManager : IPermissionPipelineBehaviourClaimManager
     {
         /// <summary>
         ///     Determines whether [has required claim] [the specified required claims].
@@ -18,7 +18,7 @@
         /// <returns><c>true</c> if [has required claim] [the specified required claims]; otherwise, <c>false</c>.</returns>
         public bool HasRequiredClaim(List<string> requiredClaims)
         {
-            return false;
+            return true;
         }
     }
 }

@@ -31,7 +31,7 @@
         /// <returns>IServiceCollection.</returns>
         public static IServiceCollection AddPermissionPipelineBehaviourClaimManagerAlwaysTrueDefault(this IServiceCollection services)
         {
-            services.AddInterceptedSingleton<IPermissionPipelineBehaviourClaimManager, PermissionPipelineBehaviourClaimManager, LogInterceptorDefault>();
+            services.AddInterceptedSingleton<IPermissionPipelineBehaviourClaimManager, PermissionPipelineBehaviourClaimAlwaysTrueDefaultManager, LogInterceptorDefault>();
 
             return services;
         }
